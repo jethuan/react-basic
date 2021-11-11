@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <!-- <script>
+        const e = React.createElement(
+                "h1", {
+                    onClick: () => {
+                        alert("Hell Jet")
+                    },
+                    style: {
+                        color: 'red'
+                    }
+                },
+                "hello Jet"
+            )
+            // sử dụng DOM
+        documentElement = document.querySelector("#root")
+        ReactDOM.render(e, documentElement)
+
+        //Sử dụng JSX
+    </script> -->
+    <script type="text/babel">
+        const e =
+        <h1 style={{ color: "blue" }} onClick={()=> { alert("Hello JS") }}>hello JET</h1>
+        ReactDOM.render(e, document.querySelector("#root"))
+    </script>
+
+</body>
+
+</html>
