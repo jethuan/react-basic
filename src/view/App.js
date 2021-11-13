@@ -4,6 +4,7 @@ import "./App.css";
 import LoginForm from "../component/LoginForm";
 import HelloWorld from "../component/Welcom";
 import productApi from "../api/productApi";
+import Clock from "../component/LifeCycle";
 
 import ConditionRender from "../component/Conditional_Render";
 import Wcom from "../component/state";
@@ -42,6 +43,7 @@ function Text() {
       {user.id == 1 && <ConditionRender msg="ok" />}
       {/* <Wcom user={{ id: 1, name: "Huan" }} /> */}
       <LoginForm hi={sayHi} />
+      <Clock />
     </div>
   );
 }
