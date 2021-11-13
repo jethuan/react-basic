@@ -6,6 +6,7 @@ import HelloWorld from "../component/Welcom";
 import productApi from "../api/productApi";
 
 import ConditionRender from "../component/Conditional_Render";
+import Wcom from "../component/state";
 
 function hello(name) {
   return "hello" + name;
@@ -39,6 +40,8 @@ function Text() {
       <WellcomeAdmin {...user} cssStyle="white" />
       {/* <ConditionRender msg="ok" /> */}
       {user.id == 1 && <ConditionRender msg="ok" />}
+      {/* <Wcom user={{ id: 1, name: "Huan" }} /> */}
+      <LoginForm hi={sayHi} />
     </div>
   );
 }
