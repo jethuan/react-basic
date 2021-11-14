@@ -45,5 +45,3 @@ export default class Wcom extends Component {
 }
 // cập nhật các trạng thái của components
 //setState cũng là async
-
-function Count() {}
