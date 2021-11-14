@@ -1,14 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles/index.css';
-import Text from './view/App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./styles/index.css";
+import Text from "./view/App";
+import ListNumber from "./component/ListNumber";
+import ListUser from "./component/ListUser";
+import TabletUser from "./component/tabletUser";
+import reportWebVitals from "./reportWebVitals";
 
-ReactDOM.render( <
-    React.StrictMode >
-    <Text / >
-    </React.StrictMode>,
-    document.getElementById('root')
+ReactDOM.render(
+  <React.StrictMode>
+    {/* <Text /> */}
+    {/* <ListNumber /> */}
+    {/* <ListUser /> */}
+    <TabletUser />
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
