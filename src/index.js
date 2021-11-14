@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/index.css";
 import Text from "./view/App";
+
 import ListNumber from "./component/ListNumber";
 import ListUser from "./component/ListUser";
 import TabletUser from "./component/tabletUser";
@@ -13,6 +14,9 @@ ReactDOM.render(
     {/* <ListNumber /> */}
     {/* <ListUser /> */}
     <TabletUser />
+    {/* <Register /> */}
+    {/* <ListNumber /> */}
+    <ListUser />
   </React.StrictMode>,
   document.getElementById("root")
 );
