@@ -1,22 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import rootReducer from "./store/reducers/rootReducer";
 import "./styles/index.css";
 import Text from "./view/App";
+import App from "./view/App";
 
 import ListNumber from "./component/ListNumber";
 import ListUser from "./component/ListUser";
 import TabletUser from "./component/tabletUser";
 import reportWebVitals from "./reportWebVitals";
 
+const reduxStore = createStore(rootReducer);
+
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Text /> */}
-    {/* <ListNumber /> */}
-    {/* <ListUser /> */}
-    <TabletUser />
-    {/* <Register /> */}
-    {/* <ListNumber /> */}
-    <ListUser />
+    <Provider store={reduxStore}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

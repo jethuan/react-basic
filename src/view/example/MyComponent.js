@@ -1,23 +1,32 @@
 import { render } from "@testing-library/react";
-import React, { Component, useState } from "react";
+import { Component, useState } from "react";
 import ChildComponent from "./ChildComponent";
-
+import ShowHide from "./Conditional_Output";
+import AddComponent from "./AddComponent";
 export default class MyComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      student: [
-        { id: "1", name: "jet", age: "2" },
-        { id: "2", name: "abus", age: "2" },
-        { id: "3", name: "boeing", age: "2" },
-      ],
-    };
-  }
+  state = {
+    firstName: "",
+    lastName: "",
+    arrJobs: [
+      { id: "abcJob1", title: "Developers", salary: "500" },
+      { id: "abcJob2", title: "Testers", salary: "400" },
+      { id: "abcJob3", title: "Project managers", salary: "1000" },
+    ],
+  };
+
+  addNewJob = (job) => {
+    console.log("check job from parent: ", job);
+    this.setState({
+      arrJobs: [...this.state.arrJobs, job],
+    });
+  };
 
   render() {
     return (
       <>
-        <ChildComponent name={"Jet"} age={32} arrStudent={this.state.student} />
+        {<AddComponent addNewJob2={this.addNewJob} />}
+        {<ChildComponent arrJobs={this.state.arrJobs} />}
+        {<ShowHide arrJobs={this.state.arrJobs} />}
       </>
     );
   }

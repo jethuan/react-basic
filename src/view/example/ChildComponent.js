@@ -1,4 +1,4 @@
-import react, { Component } from "react";
+//import { Component } from "react";
 
 // export default class ChildComponent extends Component {
 //   constructor(props) {
@@ -33,14 +33,14 @@ import react, { Component } from "react";
 
 const ChildComponent = (props) => {
   console.log("In ra props", props);
-  let { arrStudent } = props;
+  let { arrJobs } = props;
 
   return (
     <div>
-      {arrStudent.map((items, index) => {
+      {arrJobs.map((items, index) => {
         return (
           <div key={items.id}>
-            {items.id} - {items.name} - {items.age}
+            {items.id} - {items.title} - {items.salary}
           </div>
         );
       })}

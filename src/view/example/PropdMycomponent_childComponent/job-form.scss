@@ -1,0 +1,45 @@
+form {
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: white;
+  .job-container {
+    .job-title {
+      margin: 10px;
+    }
+
+    .job-salary {
+      margin: 20px;
+    }
+    input {
+      padding: 10px;
+      border-radius: 10px;
+      width: 250px;
+    }
+  }
+  .btn {
+    text-align: center;
+    button {
+      background-color: #008cba; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 10px;
+      margin-top: 20px;
+      &:hover {
+        background-color: rgb(21, 93, 226);
+      }
+    }
+  }
+}
+.show-job {
+  text-align: center;
+  color: aliceblue;
+}
